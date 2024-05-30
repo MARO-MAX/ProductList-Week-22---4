@@ -16,11 +16,25 @@ while (true)
     {
         break;
     }
+    if (string.IsNullOrEmpty(category))
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Category cannot be null or empty.");
+        Console.ResetColor();
+        continue;
+    }
     Console.Write("Add Product: ");
     string name = Console.ReadLine();
     if (name.ToLower().Trim() == "q")
     {
         break;
+    }
+    if (string.IsNullOrEmpty(name))
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Product name cannot be null or empty.");
+        Console.ResetColor();
+        continue;
     }
     double price = 0;
     string priceInput;
@@ -32,7 +46,7 @@ while (true)
         {
             break;
         }
-        if (double.TryParse(priceInput, out price))
+        if (double.TryParse(priceInput, out price) && price > 0)
         {
             break;
         }
@@ -113,11 +127,25 @@ void AddProducts()
         {
             break;
         }
+        if (string.IsNullOrEmpty(category))
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Category cannot be null or empty.");
+            Console.ResetColor();
+            continue;
+        }
         Console.Write("Add Product: ");
         string name = Console.ReadLine();
         if (name.ToLower().Trim() == "q")
         {
             break;
+        }
+        if (string.IsNullOrEmpty(name))
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Product name cannot be null or empty.");
+            Console.ResetColor();
+            continue;
         }
         double price = 0;
         string priceInput;
@@ -129,7 +157,7 @@ void AddProducts()
             {
                 break;
             }
-            if (double.TryParse(priceInput, out price))
+            if (double.TryParse(priceInput, out price) && price > 0)
             {
                 break;
             }
