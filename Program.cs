@@ -74,7 +74,7 @@ void ProductSorter()
 
     Console.WriteLine("\n------------------------------------------");
     Console.ForegroundColor= ConsoleColor.Green;
-    Console.WriteLine("\n  Your chosen products sorted by Price");
+    Console.WriteLine("\n   Your chosen products sorted by Price");
     Console.ResetColor();
     Console.WriteLine("\n------------------------------------------");
     Console.WriteLine($"{"Category".PadRight(18)}{"Product".PadRight(18)}Price");
@@ -86,7 +86,7 @@ void ProductSorter()
     }
     double sumOfAllPrices = products.Sum(x => x.Price);
     Console.ForegroundColor = ConsoleColor.Blue;
-    Console.WriteLine($"\n  Your total price is: {sumOfAllPrices:F2}\n");
+    Console.WriteLine($"\n   Your total price is: {sumOfAllPrices:F2}\n");
     Console.ResetColor();
 }
 
